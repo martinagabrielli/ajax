@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <input type="text" name="name">
+    <p id="test"></p>
+    <script>
+        $(document).ready(() => {
+
+            $("input").keyup(() => {
+                let name = $("input").val()
+                $.post("suggestions.php", {
+                    suggestion: name
+                }, (data, status) => {
+                    $("#test").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

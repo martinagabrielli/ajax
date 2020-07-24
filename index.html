@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AJAX | Load</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/get.html">Get</a></li>
+            <li><a href="/post.html">Post</a></li>
+            <li><a href="/index.php">PHP</a></li>
+        </ul>
+        <div id="test">
+            <p>This is the first content!</p>
+        </div>
+        <button id="btn">Click to change</button>
+        <script>
+            $(document).ready(() => {
+
+                $("#btn").click(() => {
+                    $("#test").load("data.txt" );
+                })
+            })
+        </script>
+    </body>
+</html>
