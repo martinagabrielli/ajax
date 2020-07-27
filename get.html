@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get</title>
+    <link rel="stylesheet" href="style.css">
     <script src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
-        <button>Click me to get data!</button>
-        <p id="test"></p>
-        <script>
-            $(document).ready(() => {
+    <a class="home-link" href="/">Home</a>
+    <button class="click-btn">Click me to get data!</button>
+    <p id="test"></p>
+    <script>
+        $(document).ready(() => {
 
-                $("button").click(() => {
-                    $.get("text.txt", (data, status) => {
-                        $("#test").html(data)
-                        alert(status)
-                    })
+            $("button").click(() => {
+                $.get("text.txt", (data, status) => {
+                    $("#test").html(data)
+                    alert(status)
                 })
             })
-        </script>
+        })
+    </script>
 </body>
 </html>
